@@ -19,7 +19,9 @@ def imc():
     else:
         situacao = 'Obeso'
     
-    resultado.configure (text=f'Olá {n}, seu IMC está em {imc:.1f}, sua situação é de {situacao}') #'configure' que dizer altere /configura
+    resultado.configure (
+        text=f'Olá {n}, \nSeu IMC está em {imc:.1f}. \nSituação: {situacao}'
+        ) #'configure' que dizer altere /configura
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FUNÇÃO LIMPAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,6 +38,7 @@ ctk.set_appearance_mode('dark') #mudar a cor da janela dark(escuro)
 #=================================JANELA PRINCIPAL============================================
 janela = ctk.CTk() #criar uma janela
 janela.geometry('500x550') #determina o tamanho
+janela.resizable(False,False)#travar o tamanho da janela
 janela.title('Aplicativo Saúde') #altera o nome da janela
 janela.iconbitmap('heartrate_86852.ico') #altera o icone da janela (site https://icon-icons.com/)
 #==============================================================================================
@@ -128,7 +131,7 @@ resultado= ctk.CTkLabel(janela,
              text='',
              text_color='#c1f7ba', #escolher cor através do color picker
              font=('Helvetica', 15, )) # tipo da letra tamanho, bold= deixar a letra mais intensa(negrito)
-resultado.place(x=20,y=350) #inicializa o componente com variavel 
+resultado.place(x=150,y=350) #inicializa o componente com variavel 
                #place (coloca os botões um ao lado do outro)
 #==============================================================================================
 
