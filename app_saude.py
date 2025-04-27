@@ -1,5 +1,65 @@
 import customtkinter as ctk
 
+#auto-py-to-exe (transforma python em executavel)
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FUNÇÃO CALCULAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def imc():
+    n = nome.get() #get é o comando que puxa o que tem na caixa, vem como texto(input)
+    p = int(peso.get())
+    a = float(altura.get().replace(',','.')) #replace(toda vez q digitar a ',' subistitua por '.')
+    
+    imc = p/(a**2)
+    
+
+    if (imc <= 18.5):
+        situacao = 'Baixo peso'
+    elif (imc >= 18.5 and imc < 25):
+        situacao = 'Parabéns!, Peso ideal'
+    elif (imc >=25 and imc <30):
+        situacao = 'Sobrepeso'
+    else:
+        situacao = 'Obeso'
+    
+    resultado.configure (f'Olá {n}, seu IMC está em {imc:.1f}, sua situação é de {situacao}') #'configure' que dizer altere /configura
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FUNÇÃO LIMPAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def limpar():
+    nome.delete(0,'end')
+    peso.delete(0,'end')
+    altura.delete(0,'end')
+    resultado.configure(text='')
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ctk.set_appearance_mode('dark') #mudar a cor da janela dark(escuro) 
 
 #criar interface    #largura=1920px altura=1080 tela cheia(padrão)
@@ -89,6 +149,15 @@ botao_limpar.place(x=300,y=300) #inicializa o componente com variavel
                #place (coloca os botões um ao lado do outro)
 #==============================================================================================
 
-
+#=================================Resultado ============================================
+#objetos importantes precisam estar numa variavel
+#criar primeiro titulo da janela(não precisa de variavel)
+resultado= ctk.CTkLabel(janela,
+             text='',
+             text_color='#c1f7ba', #escolher cor através do color picker
+             font=('Helvetica', 15, )) # tipo da letra tamanho, bold= deixar a letra mais intensa(negrito)
+resultado.place(x=20,y=350) #inicializa o componente com variavel 
+               #place (coloca os botões um ao lado do outro)
+#==============================================================================================
 
 janela.mainloop() #rodar o sistema
