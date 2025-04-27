@@ -16,7 +16,7 @@ janela.iconbitmap('heartrate_86852.ico') #altera o icone da janela (site https:/
 #criar primeiro titulo da janela(não precisa de variavel)
 ctk.CTkLabel(janela,
              text='Aplicativo Saúde',
-             text_color='#c1f7ba', #escolher cor através do color picker
+             text_color='#c1f7ba', #Cor da letra (escolher cor através do color picker)
              font=('Helvetica', 30, 'bold') #tipo da letra, tamanho, deixar a letra mais intensa(negrito)
              ).pack(pady=15) #inicializa o componente  #pady = 10 (dá um espaçamento entre o titulo e a tela)
 #==============================================================================================
@@ -30,7 +30,8 @@ nome = ctk.CTkEntry(janela,    #CTkEntry(cria caixas)
                      height=40, #altura
                      border_color='#e3f2e1', #borda
                      fg_color='#f2f2f2', #cor de fundo da caixa  
-                     placeholder_text='Digite o seu nome')   #criar texto em marca d'agua
+                     placeholder_text='Digite o seu nome',   #criar texto em marca d'agua
+                     text_color='black') #Cor da letra quando usuario digitar (escolher cor através do color picker)
 nome.pack(pady=15) #inicializa o componente com variavel #pady = 10 (dá um espaçamento entre o titulo e a tela)
 #==============================================================================================
 
@@ -41,7 +42,8 @@ altura = ctk.CTkEntry(janela,    #CTkEntry(cria caixas)
                      height=40, #altura
                      border_color='#e3f2e1', #borda
                      fg_color='#f2f2f2', #cor de fundo da caixa             
-                     placeholder_text='Digite a sua altura')   #criar texto em marca d'agua
+                     placeholder_text='Digite a sua altura',   #criar texto em marca d'agua
+                     text_color='black') #Cor da letra quando usuario digitar (escolher cor através do color picker)
 altura.pack(pady=15) #inicializa o componente com variavel #pady = 10 (dá um espaçamento entre o titulo e a tela)
 #==============================================================================================
 
@@ -52,7 +54,8 @@ peso = ctk.CTkEntry(janela,    #CTkEntry(cria caixas)
                      height=40, #altura
                      border_color='#e3f2e1', #borda
                      fg_color='#f2f2f2', #cor de fundo da caixa  
-                     placeholder_text='Digite o seu peso')   #criar texto em marca d'agua
+                     placeholder_text='Digite o seu peso',   #criar texto em marca d'agua
+                     text_color='black') #Cor da letra quando usuario digitar (escolher cor através do color picker)
 peso.pack(pady=18) #inicializa o componente com variavel #pady = 10 (dá um espaçamento entre o titulo e a tela)
 #==============================================================================================
 
