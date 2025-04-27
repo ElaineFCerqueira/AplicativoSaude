@@ -2,13 +2,12 @@ import customtkinter as ctk
 
 ctk.set_appearance_mode('dark') #mudar a cor da janela dark(escuro) 
 
-#criar interface
-#lagura=1920px altura=1080 tela cheia(padrão)
+#criar interface    #largura=1920px altura=1080 tela cheia(padrão)
 #=================================JANELA PRINCIPAL============================================
 janela = ctk.CTk() #criar uma janela
-janela.geometry('600x400') #determina o tamanho
+janela.geometry('500x550') #determina o tamanho
 janela.title('Aplicativo Saúde') #altera o nome da janela
-janela.iconbitmap('interface_app_saude/heartrate_86852.ico') #altera o icone da janela (site https://icon-icons.com/)
+janela.iconbitmap('AplicativoSaude/heartrate_86852.ico') #altera o icone da janela (site https://icon-icons.com/)
 #==============================================================================================
 
 
