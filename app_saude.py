@@ -70,7 +70,8 @@ botao_calcular = ctk.CTkButton(janela, #CTkButton - cria o botão
                       cursor='Heart', #transforma o botão em um coração(pra dizer que aquela area é clicavél)  
                       text_color='black', #cor do texto
                       font= ('Helvetica',20, 'bold'))#fonte do texto    
-botao_calcular.pack(side="left", padx=100, pady=10) #inicializa o componente com variavel #pady = 10 (dá um espaçamento entre o titulo e a tela)
+botao_calcular.place(x=100,y=300) #inicializa o componente com variavel 
+               #place (coloca os botões um ao lado do outro)
 #==============================================================================================
 
 
@@ -84,7 +85,8 @@ botao_limpar = ctk.CTkButton(janela, #CTkButton - cria o botão
                       cursor='Heart', #transforma o botão em um coração(pra dizer que aquela area é clicavél)  
                       text_color='black', #cor do texto
                       font= ('Helvetica',20, 'bold'))#fonte do texto   
-botao_limpar.pack(side="left", padx=10, pady=10) #inicializa o componente com variavel #pady = 10 (dá um espaçamento entre o titulo e a tela)
+botao_limpar.place(x=300,y=300) #inicializa o componente com variavel 
+               #place (coloca os botões um ao lado do outro)
 #==============================================================================================
 
 
