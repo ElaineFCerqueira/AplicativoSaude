@@ -7,7 +7,7 @@ ctk.set_appearance_mode('dark') #mudar a cor da janela dark(escuro)
 janela = ctk.CTk() #criar uma janela
 janela.geometry('500x550') #determina o tamanho
 janela.title('Aplicativo Saúde') #altera o nome da janela
-janela.iconbitmap('AplicativoSaude/heartrate_86852.ico') #altera o icone da janela (site https://icon-icons.com/)
+janela.iconbitmap('heartrate_86852.ico') #altera o icone da janela (site https://icon-icons.com/)
 #==============================================================================================
 
 
@@ -18,7 +18,7 @@ ctk.CTkLabel(janela,
              text='Aplicativo Saúde',
              text_color='#c1f7ba', #escolher cor através do color picker
              font=('Helvetica', 30, 'bold') #tipo da letra, tamanho, deixar a letra mais intensa(negrito)
-             ).pack(pady=12) #inicializa o componente  #pady = 10 (dá um espaçamento entre o titulo e a tela)
+             ).pack(pady=15) #inicializa o componente  #pady = 10 (dá um espaçamento entre o titulo e a tela)
 #==============================================================================================
 
 
