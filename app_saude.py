@@ -19,7 +19,7 @@ def imc():
     else:
         situacao = 'Obeso'
     
-    resultado.configure (f'Olá {n}, seu IMC está em {imc:.1f}, sua situação é de {situacao}') #'configure' que dizer altere /configura
+    resultado.configure (text=f'Olá {n}, seu IMC está em {imc:.1f}, sua situação é de {situacao}') #'configure' que dizer altere /configura
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ FUNÇÃO LIMPAR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,36 +29,6 @@ def limpar():
     altura.delete(0,'end')
     resultado.configure(text='')
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ctk.set_appearance_mode('dark') #mudar a cor da janela dark(escuro) 
 
@@ -129,7 +99,8 @@ botao_calcular = ctk.CTkButton(janela, #CTkButton - cria o botão
                       hover_color='#e3f2e1', #a cor do botão quando o mouse passa por cima  
                       cursor='Heart', #transforma o botão em um coração(pra dizer que aquela area é clicavél)  
                       text_color='black', #cor do texto
-                      font= ('Helvetica',20, 'bold'))#fonte do texto    
+                      font= ('Calibri',20, 'bold'),#fonte do texto
+                      command=imc)    
 botao_calcular.place(x=100,y=300) #inicializa o componente com variavel 
                #place (coloca os botões um ao lado do outro)
 #==============================================================================================
@@ -144,7 +115,8 @@ botao_limpar = ctk.CTkButton(janela, #CTkButton - cria o botão
                       hover_color='#e3f2e1', #a cor do botão quando o mouse passa por cima  
                       cursor='Heart', #transforma o botão em um coração(pra dizer que aquela area é clicavél)  
                       text_color='black', #cor do texto
-                      font= ('Helvetica',20, 'bold'))#fonte do texto   
+                      font= ('Calibri',20, 'bold'),#fonte do texto
+                      command=limpar)   
 botao_limpar.place(x=300,y=300) #inicializa o componente com variavel 
                #place (coloca os botões um ao lado do outro)
 #==============================================================================================
