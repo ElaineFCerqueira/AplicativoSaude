@@ -64,7 +64,7 @@ peso.pack(pady=18) #inicializa o componente com variavel #pady = 10 (dá um espa
 botao_calcular = ctk.CTkButton(janela, #CTkButton - cria o botão 
                       text='Calcular', #texto do botão
                       width=120,
-                      height=70,
+                      height=40,
                       fg_color='darkgreen', #a cor do botão 
                       hover_color='#e3f2e1', #a cor do botão quando o mouse passa por cima  
                       cursor='Heart', #transforma o botão em um coração(pra dizer que aquela area é clicavél)  
@@ -79,7 +79,7 @@ botao_calcular.place(x=100,y=300) #inicializa o componente com variavel
 botao_limpar = ctk.CTkButton(janela, #CTkButton - cria o botão 
                       text='Limpar', #texto do botão
                       width=120, #largura
-                      height=70, #altura
+                      height=40, #altura
                       fg_color='darkred', #a cor do botão 
                       hover_color='#e3f2e1', #a cor do botão quando o mouse passa por cima  
                       cursor='Heart', #transforma o botão em um coração(pra dizer que aquela area é clicavél)  
